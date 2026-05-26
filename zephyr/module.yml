@@ -1,0 +1,26 @@
+name: hal_broadcom
+build:
+  cmake-ext: True
+  kconfig-ext: True
+blobs:
+  # BCM43436S Wi-Fi firmware for the brcmfmac driver (used by the
+  # Raspberry Pi Zero 2 W on-module SDIO Wi-Fi chip). Sourced from
+  # the Raspberry Pi firmware-nonfree distribution, which mirrors
+  # the Cypress/Infineon-released Linux brcmfmac firmware.
+  - path: img/brcmfmac/brcmfmac43436s-sdio.bin
+    sha256: 68b9bcc9855d91733cd44c21de4cb507c91b0d32d838c0696def5eb96c99e2de
+    type: img
+    version: "1.20240709"
+    license-path: zephyr/blobs/license/LICENCE.broadcom_bcm43xx
+    url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/brcm/brcmfmac43436s-sdio.bin
+    description: "BCM43436S Wi-Fi firmware (brcmfmac SDIO)"
+    doc-url: https://github.com/RPi-Distro/firmware-nonfree
+
+  - path: img/brcmfmac/brcmfmac43436s-sdio.txt
+    sha256: 37a8b85a5a9742761101b764a07bc4d0c8b09f2e180eaea3b503a834277ad595
+    type: img
+    version: "1.20240709"
+    license-path: zephyr/blobs/license/LICENCE.broadcom_bcm43xx
+    url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/brcm/brcmfmac43436s-sdio.txt
+    description: "BCM43436S Wi-Fi NVRAM (board calibration)"
+    doc-url: https://github.com/RPi-Distro/firmware-nonfree
