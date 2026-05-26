@@ -1,7 +1,4 @@
 name: hal_broadcom
-build:
-  cmake-ext: True
-  kconfig-ext: True
 blobs:
   # BCM43436S Wi-Fi firmware for the brcmfmac driver (used by the
   # Raspberry Pi Zero 2 W on-module SDIO Wi-Fi chip). Sourced from
