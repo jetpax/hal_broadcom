@@ -21,3 +21,25 @@ blobs:
     url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/brcm/brcmfmac43436s-sdio.txt
     description: "BCM43436S Wi-Fi NVRAM (board calibration)"
     doc-url: https://github.com/RPi-Distro/firmware-nonfree
+
+  # BCM43430A1 Wi-Fi firmware for the original Raspberry Pi Zero W
+  # (BCM2835 SoC). The .bin lives under the cypress subtree in
+  # firmware-nonfree; the model-zero-w symlink points at it. NVRAM
+  # comes from the generic brcm/ tree (BCM943430WLSELG board).
+  - path: img/brcmfmac/brcmfmac43430-sdio.bin
+    sha256: 0717f8e798f3962230e76e9d840385ba127a38d31d6a55acd5c97cf53e4acc9d
+    type: img
+    version: "1.20240709"
+    license-path: zephyr/blobs/license/LICENCE.broadcom_bcm43xx
+    url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/cypress/cyfmac43430-sdio.bin
+    description: "BCM43430A1 Wi-Fi firmware (brcmfmac SDIO)"
+    doc-url: https://github.com/RPi-Distro/firmware-nonfree
+
+  - path: img/brcmfmac/brcmfmac43430-sdio.txt
+    sha256: fc3949a4c32f07c18308e7e145c7615be314158e7d714a80e04e4791f16495f9
+    type: img
+    version: "1.20240709"
+    license-path: zephyr/blobs/license/LICENCE.broadcom_bcm43xx
+    url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/brcm/brcmfmac43430-sdio.txt
+    description: "BCM43430A1 Wi-Fi NVRAM (board calibration)"
+    doc-url: https://github.com/RPi-Distro/firmware-nonfree
