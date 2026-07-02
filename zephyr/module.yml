@@ -43,3 +43,17 @@ blobs:
     url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/brcm/brcmfmac43430-sdio.txt
     description: "BCM43430A1 Wi-Fi NVRAM (board calibration)"
     doc-url: https://github.com/RPi-Distro/firmware-nonfree
+
+  # The 43430A1 firmware is a Cypress trim-on-build (TOB) image with the
+  # CLM (regulatory/channel database) stripped out. Without a CLM
+  # download at init the firmware has a null country (#n), zero valid
+  # channels, and keeps the radio COUNTRY_DISABLEd -- WLC_UP reports OK
+  # but isup stays 0 and every radio op fails BCME_NOTUP.
+  - path: img/brcmfmac/brcmfmac43430-sdio.clm_blob
+    sha256: 3376b9c9b32d16bf762e21c7fafb665365070ae240d092498d0d1987c22022aa
+    type: img
+    version: "1.20240709"
+    license-path: zephyr/blobs/license/LICENCE.broadcom_bcm43xx
+    url: https://github.com/RPi-Distro/firmware-nonfree/raw/bookworm/debian/config/brcm80211/cypress/cyfmac43430-sdio.clm_blob
+    description: "BCM43430A1 Wi-Fi CLM blob (regulatory database)"
+    doc-url: https://github.com/RPi-Distro/firmware-nonfree
